@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Retro Series - Contenidos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bgMosaic" aria-hidden="true"></canvas>
+  <header class="site-header">
+    <div class="brand">
+      <h1 class="brand-logo"><span class="logo-left">Retro</span><span class="logo-right">Hub</span></h1>
+    </div>
+    <div class="search-wrap">
+      <input id="searchInput" type="search" placeholder="Buscar serie o capítulo..." />
+    </div>
+  </header>
+
+  <main class="content">
+    <section class="filters">
+      <select id="sortSelect">
+        <option value="title-asc">A-Z</option>
+        <option value="title-desc">Z-A</option>
+        <option value="year-desc">Más nuevas</option>
+        <option value="year-asc">Más antiguas</option>
+      </select>
+    </section>
+
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <!-- Selector de capítulos -->
+  <div id="episodeModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="close" id="closeEpisodeModal" aria-label="Cerrar">✕</button>
+      <div class="modal-header">
+        <img id="modalThumb" alt="" />
+        <div>
+          <h2 id="modalTitle"></h2>
+          <p id="modalMeta" class="meta"></p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="season-picker">
+          <label for="seasonSelect">Temporada</label>
+          <select id="seasonSelect"></select>
+        </div>
+        <div id="episodeList" class="episode-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reproductor -->
+  <div id="playerOverlay" class="player-overlay hidden" aria-hidden="true">
+    <div class="player-chrome">
+      <div class="player-topbar">
+        <div class="player-title" id="playerTitle"></div>
+        <button id="closePlayer" class="close">Cerrar ✕</button>
+      </div>
+      <video id="videoEl" controls preload="metadata" playsinline controlsList="nodownload noplaybackrate" disablePictureInPicture></video>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Catálogo retro para fines demostrativos. Usa el buscador para encontrar tu serie y elige el capítulo para reproducir.</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
+

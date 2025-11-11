@@ -1,0 +1,140 @@
+:root {
+  --bg: #16120f; /* oscuro cálido retro */
+  --card: #1b1612;
+  --text: #f2efe9;
+  --muted: #bfb7a8;
+  --accent: #ffcc33; /* amarillo juguetón */
+  --accent-2: #fff5cc;
+  --border: #2a221b;
+  --shadow: rgba(0,0,0,0.35);
+}
+/* ...existing styles... */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  position: relative;
+  /* Nuevo fondo: patrón Memphis + velo para legibilidad */
+  background:
+    linear-gradient(rgba(22,18,15,0.82), rgba(22,18,15,0.82)),
+    url("memphis_bg.png");
+  background-size: auto, 480px;
+  background-repeat: no-repeat, repeat;
+  background-attachment: fixed, fixed;
+}
+/* ...existing styles... */
+.site-header {
+  display:flex; gap:1rem; justify-content:space-between; align-items:center;
+  padding: 1rem; border-bottom: 1px solid var(--border); background: #14100d;
+}
+.brand { display:flex; align-items:center; gap:.75rem; }
+.brand-logo { margin:0; font-size:1.4rem; font-weight:800; letter-spacing:.3px; display:flex; align-items:center; gap:.4rem; }
+.brand-logo .logo-left { color:#fff; }
+.brand-logo .logo-right { background: var(--accent); color:#111; padding:.1rem .45rem; border-radius:.35rem; }
+.brand h1 { font-size: 1.25rem; margin:0; letter-spacing:.5px; }
+.brand-badge { background: var(--accent); color: #3b2f0a; font-weight:700; padding:.25rem .5rem; border-radius:.5rem; }
+.search-wrap input {
+  width: min(460px, 70vw); padding:.6rem .75rem; border:1px solid var(--border); background:#151515; color:var(--text);
+  border-radius:.4rem; outline: none;
+}
+.filters { display:flex; justify-content:flex-end; padding: .75rem 1rem; border-bottom:1px solid var(--border); }
+.filters select {
+  background:#151515; color:var(--text); border:1px solid var(--border); padding:.4rem .6rem; border-radius:.4rem;
+}
+/* ...existing styles... */
+.grid {
+  display:grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem; padding: 1rem;
+}
+.card {
+  background: var(--card); border:1px solid var(--border); border-radius:1rem; overflow:hidden;
+  box-shadow: 0 6px 18px var(--shadow); cursor:pointer; transition: transform .15s ease, border-color .15s ease;
+}
+.card:hover { transform: translateY(-2px); border-color: #2f2f2f; }
+.card img { width:100%; aspect-ratio: 3/4; object-fit: cover; display:block; }
+.card .info { padding:.6rem .7rem; display:flex; flex-direction:column; gap:.25rem; }
+.card .info .extras {
+  padding: .5rem .7rem .7rem;
+  display:flex; align-items:center; justify-content:space-between; gap:.75rem;
+}
+.card .info .reactions { display:flex; align-items:center; gap:.5rem; }
+.card .info .reaction-btn {
+  background: transparent; border:1px solid #3a2f25; box-shadow:none; color: var(--text);
+}
+.card .info .reaction-btn.active {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(255,204,51,0.18) inset;
+}
+.card .info .reaction-btn[disabled] { opacity:.5; cursor:not-allowed; }
+.card .info .reaction-btn:hover { border-color:#3a2f25; }
+.card .info .reaction-count { color: var(--accent-2); font-weight:700; }
+.card .info .country-badge {
+  background: transparent; border:1px dashed #3a2f25; padding:.25rem .45rem;
+}
+.card .info .country-badge .label { display:none; }
+.card .info .country-badge .flag { font-size:1rem; }
+.card .info .country-badge .label { font-weight:600; color: var(--accent-2); }
+.card .title { font-weight:700; font-size:.95rem; }
+.card .meta { font-size:.8rem; color: var(--muted); }
+/* ...existing styles... */
+.modal.hidden, .player-overlay.hidden { display:none; }
+.modal {
+  position:fixed; inset:0; background: rgba(0,0,0,0.6); display:grid; place-items:center; padding: 1rem;
+}
+.modal-dialog {
+  width:min(960px, 95vw); background:#121315; border:1px solid var(--border); border-radius:.75rem; overflow:hidden;
+}
+.modal-header {
+  display:flex; gap:1rem; padding: 1rem; border-bottom:1px solid var(--border); background:#161718;
+}
+.modal-header img { width:84px; height:84px; object-fit:cover; border-radius:.4rem; border:1px solid var(--border); }
+.modal-header h2 { margin:.15rem 0 .25rem; font-size:1.1rem; }
+.modal-header .meta { color: var(--muted); font-size:.85rem; }
+.modal .close {
+  position:absolute; right: 1rem; top: 1rem; background: transparent; color: var(--accent-2);
+  border:1px solid var(--border); border-radius:.4rem; padding:.4rem .6rem; cursor:pointer;
+}
+.modal-body { padding: 1rem; }
+.season-picker { display:flex; align-items:center; gap:.75rem; margin-bottom:.75rem; }
+.season-picker select {
+  background:#151515; color:var(--text); border:1px solid var(--border); padding:.35rem .5rem; border-radius:.4rem;
+}
+.episode-list {
+  display:grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap:.75rem;
+}
+.episode {
+  background:#1a1a1a; border:1px solid var(--border); border-radius:.5rem; padding:.6rem;
+  display:flex; align-items:center; gap:.6rem; cursor:pointer;
+}
+.episode:hover { border-color:#2f2f2f; }
+.ep-thumb { width:56px; height:56px; object-fit:cover; border-radius:.35rem; border:1px solid var(--border); }
+.ep-info { display:flex; flex-direction:column; gap:.15rem; }
+.ep-title { font-weight:600; }
+.ep-meta { color:var(--muted); font-size:.8rem; }
+/* ...existing styles... */
+.player-overlay {
+  position:fixed; inset:0; background: rgba(0,0,0,0.85); display:grid; place-items:center; padding:1rem;
+}
+.player-chrome {
+  width:min(1000px, 95vw);
+}
+.player-topbar {
+  display:flex; justify-content:space-between; align-items:center; margin-bottom:.5rem;
+}
+.player-title { font-weight:700; }
+#videoEl {
+  width:100%; max-height: 75vh; background:#000; border:1px solid var(--border); border-radius:.5rem;
+}
+/* ...existing styles... */
+.site-footer {
+  padding: 1rem; border-top:1px solid var(--border); color: var(--muted); font-size:.9rem; background:#14100d;
+}
+/* ...existing styles... */
+@media (max-width: 640px) {
+  .modal-header { flex-direction:column; align-items:flex-start; }
+}
+
+/* Ocultar el canvas de mosaicos previo */
+#bgMosaic { display: none; }
