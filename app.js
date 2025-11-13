@@ -1,16 +1,16 @@
 const seriesData = [
   {
     id: "dbz",
-    title: "Dragon Ball Z",
-    year: 1989,
-    thumb: "dragon_ball_z.png",
+    title: "Felix el Gato",
+    year: 1958,
+    thumb: ""portada_gatofelix.jpg"",
     seasons: [
       {
         season: 1,
         episodes: [
-          { number: 1, title: "El guerrero misterioso", duration: "24m", src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" },
-          { number: 2, title: "La llegada de Raditz", duration: "24m", src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" },
-          { number: 3, title: "El sacrificio de Goku", duration: "24m", src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" },
+          { number: 1, title: "Episodio 1", duration: "7m", src: "https://archive.org/details/FelixMichi58/1x01.mp4" },
+          { number: 2, title: "Episodio 2", duration: "7m", src: "https://archive.org/details/FelixMichi58/1x02.mp4" },
+          { number: 3, title: "Episodio 3", duration: "7m", src: "https://archive.org/details/FelixMichi58/1x03.mp4" },
         ],
       },
       { season: 2, episodes: [{ number: 1, title: "Entrenamiento en el otro mundo", duration: "24m", src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" }] },
