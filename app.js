@@ -9,11 +9,11 @@ const seriesData = [
         season: 1,
         episodes: [
           { number: 1, title: "El guerrero misterioso", duration: "24m", src: "https://archive.org/details/FelixMichi58/2x03.mp4" },
-          { number: 2, title: "La llegada de Raditz", duration: "24m", src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" },
-          { number: 3, title: "El sacrificio de Goku", duration: "24m", src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" },
+          { number: 2, title: "La llegada de Raditz", duration: "24m", src: "https://t.me/Ranmaymedio_TELESCONDITE/164" },
+          { number: 3, title: "El sacrificio de Goku", duration: "24m", src: "https://www.youtube.com/watch?v=SqD34LAELvY" },
         ],
       },
-      { season: 2, episodes: [{ number: 1, title: "Entrenamiento en el otro mundo", duration: "24m", src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" }] },
+      { season: 2, episodes: [{ number: 1, title: "Entrenamiento en el otro mundo", duration: "24m", src: "https://www.dailymotion.com/video/x9tqpva" }] },
     ],
   },
   {
@@ -25,7 +25,7 @@ const seriesData = [
       {
         season: 1,
         episodes: [
-          { number: 1, title: "Seiya, el caballero de Pegaso", duration: "23m", src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" },
+          { number: 1, title: "porn", duration: "23m", src: "https://es.pornhub.com/view_video.php?viewkey=690d0aca92a18" },
           { number: 2, title: "El torneo galáctico", duration: "23m", src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" },
         ],
       },
