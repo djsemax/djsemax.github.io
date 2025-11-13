@@ -8,7 +8,7 @@ const seriesData = [
       {
         season: 1,
         episodes: [
-          { number: 1, title: "El guerrero misterioso", duration: "24m", src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" },
+          { number: 1, title: "El guerrero misterioso", duration: "24m", src: "https://archive.org/details/FelixMichi58/2x03.mp4" },
           { number: 2, title: "La llegada de Raditz", duration: "24m", src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" },
           { number: 3, title: "El sacrificio de Goku", duration: "24m", src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" },
         ],
