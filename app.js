@@ -3,7 +3,7 @@ const seriesData = [
     id: "dbz",
     title: "Felix el Gato",
     year: 1958,
-    thumb: ""portada_gatofelix.jpg"",
+    thumb: "portada_gatofelix.jpg",
     seasons: [
       {
         season: 1,
